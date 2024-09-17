@@ -6,7 +6,7 @@ import {
   patchContactController,
   deleteContactController,
 } from '../controllers/contacts.js';
-import isValidId from '../middlewares/isValidid.js';
+import isValidId from '../middlewares/isValidId.js';
 import ctrlWrapper from '../utils/ctrlWrapper.js';
 import validateBody from '../utils/validateBody.js';
 import {
