@@ -1,7 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary';
 import * as fs from 'node:fs/promises';
 
-import { env } from '../utils/env.js';
+import { env } from './env.js';
 
 const cloud_name = env('CLOUDINARY_CLOUD_NAME');
 const api_key = env('CLOUDINARY_API_KEY');
