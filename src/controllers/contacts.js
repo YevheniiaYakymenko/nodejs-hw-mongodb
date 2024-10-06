@@ -88,7 +88,11 @@ export const upsertContactController = async (req, res) => {
 export const patchContactController = async (req, res) => {
   let photo;
   if (req.file) {
-    photo = await saveFileToUploadDir(req.file);
+    if (enableCloudinary === 'true') {
+      photo = await saveFileToCloudinary(req.file, 'photo');
+    } else {
+      photo = await saveFileToUploadDir(req.file);
+    }
   }
   const { contactId } = req.params;
   const { _id: userId } = req.user;
