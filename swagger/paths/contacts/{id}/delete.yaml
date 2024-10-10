@@ -12,48 +12,8 @@ parameters:
     schema:
       type: string
       example: '65ca67e7ae7f10c88b598384'
-requestBody:
-  content:
-    multipart/form-data:
-      schema:
-        type: object
-        required:
-          - name
-          - phoneNumber
-          - contactType
-        properties:
-          name:
-            description: "Contact's name"
-            type: string
-            example: 'Alice New'
-          phoneNumber:
-            description: "Contact's phoneNumber"
-            type: string
-            example: '+380997654321'
-          email:
-            description: "Contact's email"
-            type: string
-            example: 'alice@gmail.com'
-          contactType:
-            description: "Contact's type"
-            type: string
-            enum: ['work', 'home', 'personal']
-            example: 'home'
-          isFavourite:
-            description: 'Is contact favourite'
-            type: boolean
-            example: true
-          userId:
-            description: "Contact's id"
-            type: string
-            example: '65e4decdd286b30065d54af9'
-          photo:
-            description: "Contact's photo"
-            type: string
-            format: binary
 responses:
   '204':
     description: Delete a contact
-
   '404':
     $ref: '../../../components/responses/404.yaml'
